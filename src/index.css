@@ -5,14 +5,12 @@
 @tailwind utilities;
 
 @layer components {
-    .capsule-box {
-        @apply px-2 py-1 bg-zinc-900 bg-opacity-75 rounded-md max-h-32
+    .capsule {
+        @apply px-2 py-1 bg-zinc-900 bg-opacity-75 rounded-md overflow-hidden;
     }
-}
 
-@layer components {
-    .capsule-double {
-        @apply px-2 py-1 bg-zinc-900 bg-opacity-75 rounded-md max-h-64
+    .capsule-box {
+        @apply capsule
     }
 }
 

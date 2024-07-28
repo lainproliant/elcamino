@@ -15,12 +15,12 @@ export default {
             '4xl': '2.5rem',
             '5xl': '3rem'
         },
-        extend: {},
+        extend: { },
     },
     plugins: [
         require("daisyui"),
         require("tailwind-fontawesome")({
-            version: 6
+            version: 6,
         })
     ],
 }

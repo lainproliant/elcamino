@@ -11,15 +11,15 @@ function TimeCard() {
             const now = moment();
 
             setTimeString(now.format("hh:mm:ss a"));
-            setDateString(now.format("dddd, MMMM DD YYYY"))
+            setDateString(now.format("dddd, MMM Do YYYY"))
         }, Config.TIMECARD_INTERVAL_MS);
 
         return () => clearInterval(timer);
     });
 
     return (
-        <div className="capsule-box">
-            <div className="text-3xl text-zinc-100">{dateString}</div>
+        <div className="flex flex-col text-center">
+            <div className="text-2xl text-zinc-100">{dateString}</div>
             <div className="text-4xl font-mono font-bold">{timeString}</div>
         </div>
     );

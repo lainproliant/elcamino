@@ -5,7 +5,7 @@ function BulletinCard({bulletin}: {bulletin: Bulletin}) {
         <div className="capsule-box flex gap-3">
             <div className="avatar flex-none">
                 <div className="mask mask-hexagon w-24 flex-none">
-                    <img src={bulletin.thumbnail_url} alt={bulletin.author} />
+                    <img style={{objectFit: "scale-down"}} src={bulletin.thumbnail_url} alt={bulletin.author} />
                 </div>
             </div>
             <div className="bulletin flex flex-col">

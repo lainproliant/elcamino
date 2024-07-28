@@ -2,7 +2,6 @@ import './app.css';
 import * as Config from './config.ts';
 import Bulletin from './models/bulletin.ts';
 import BulletinCard from './cards/bulletin.tsx';
-import TimeCard from './cards/time.tsx';
 import moment from 'moment';
 import { CurrentWeatherCard } from './cards/weather.tsx';
 import { WeatherReport } from './models/weather.ts';
@@ -35,10 +34,9 @@ function App() {
     }, [])
 
     return (
-        <div className="w-full overflow-hidden">
-            <main role="main" className="w-full grid grid-cols-3 grid-rows-6 gap-3 p-1">
+        <div className="w-screen h-screen overflow-hidden">
+            <main role="main" className="w-full h-full grid grid-flow-col grid-cols-3 grid-rows-8 gap-3 p-1">
                 { weatherReport != null ? <CurrentWeatherCard report={weatherReport!} /> : <></> }
-                <TimeCard/>
                 <BulletinCard bulletin={test_bulletin} />
                 <BulletinCard bulletin={test_bulletin} />
                 <BulletinCard bulletin={test_bulletin} />
